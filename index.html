@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="assets/ThePunchLogo.png" />
+<title>ThePunch</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #111110;
+    color: #f5f0e8;
+    font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', sans-serif;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100dvh;
+    position: relative;
+    max-width: 1200px;  
+    margin: 0 auto;  
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 3.5rem 4rem 5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 3.5rem;
+    animation: fade-up 0.5s 0.1s ease both;
+  }
+
+  .logo-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 18px rgba(239,159,39,0.4));
+  }
+
+  .logo-text {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #f5f0e8;
+  }
+
+  .logo-text span { color: #EF9F27; }
+
+  .headline {
+    font-size: clamp(36px, 4.5vw, 58px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: #f5f0e8;
+    margin-bottom: 1.25rem;
+    animation: fade-up 0.5s 0.2s ease both;
+  }
+
+  .headline em {
+    font-style: normal;
+    color: #EF9F27;
+  }
+
+  .headline em.punch {
+    font-size: 1.15em;
+  }
+
+  .subline {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(245,240,232,0.5);
+    max-width: 360px;
+    margin-bottom: 2.5rem;
+    animation: fade-up 0.5s 0.32s ease both;
+  }
+
+  .legal-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    padding-left: 4px;
+    animation: fade-up 0.5s 0.52s ease both;
+  }
+
+  .legal-links a {
+    font-size: 12px;
+    color: rgba(245, 240, 232, 0.554);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.15s ease;
+  }
+
+  .legal-links a:hover { color: rgba(245,240,232,0.65); }
+
+  .legal-links span {
+    font-size: 16px;
+    color: rgba(245, 240, 232, 0.554);
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    animation: fade-up 0.5s 0.44s ease both;
+  }
+
+  .app-store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f0e8;
+    color: #111110;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 48px;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    transition: background 0.15s ease, transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .app-store-btn:hover  { background: #EF9F27; transform: scale(1.02); }
+  .app-store-btn:active { transform: scale(0.98); }
+
+  .app-store-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .coming-soon {
+    font-size: 12px;
+    color: rgba(245,240,232,0.25);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding-left: 4px;
+  }
+
+  .right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .phones {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone {
+    position: absolute;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.08),
+      0 32px 80px rgba(0,0,0,0.6),
+      0 8px 24px rgba(0,0,0,0.4);
+  }
+
+  .phone img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .phone-front {
+    width: 270px;
+    height: 580px;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%) rotate(-3deg) translateX(-100px);
+    animation: float-front 0.6s 0.35s ease both;
+    z-index: 2;
+  }
+
+  .phone-back {
+    width: 260px;
+    height: 560px;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%) rotate(6deg) translateX(140px) translateY(20px);
+    animation: float-back 0.6s 0.5s ease both;
+    z-index: 1;
+  }
+
+  @keyframes float-front {
+    0%   { opacity: 0; transform: translate(-50%, -45%) rotate(-3deg) translateX(-30px); }
+    100% { opacity: 1; transform: translate(-50%, -50%) rotate(-3deg) translateX(-70px); }
+  }
+
+  @keyframes float-back {
+    0%   { opacity: 0; transform: translate(-50%, -45%) rotate(6deg) translateX(70px) translateY(20px); }
+    100% { opacity: 1; transform: translate(-50%, -50%) rotate(6deg) translateX(110px) translateY(20px); }
+  }
+
+  @keyframes fade-up {
+    0%   { opacity: 0; transform: translateY(18px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 960px) {
+    .page {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+
+    .left {
+      padding: 3rem 2rem 2rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo-row { margin-bottom: 2.5rem; }
+
+    .subline {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-group { align-items: center; }
+
+    .right {
+      min-height: auto;
+      align-items: flex-start;
+      padding-top: 1rem;
+    }
+
+    .phone-front {
+      width: 175px;
+      height: 358px;
+      display: none;
+    }
+
+    .phone-back {
+      width: 165px;
+      height: 338px;
+      display: none;
+    }
+
+    .phones {
+      background-image: url("assets/punch-card.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: fade-up 0.8s 0.5s ease both;
+      padding-top: -30px;
+      max-width: 500px;
+      height: 260px;
+    }
+    .right {
+      min-height: auto; 
+    }
+  }
+
+  @media (max-width: 420px) {
+    .left { padding: 2.5rem 1.5rem 1.5rem; }
+    .headline { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="left">
+    <div class="logo-row">
+      <img class="logo-img" src="assets/ThePunchLogo.png"/>
+      <div class="logo-text">The<span> Punch</span></div>
+    </div>
+
+    <h1 class="headline">Say it.<br>Feel it.<br><em class="punch">Punch it.</em></h1>
+
+    <p class="subline">Stay connected to your friends. Say what's on your mind. Find your people. Be yourself.</p>
+
+    <div class="btn-group">
+      <a href="https://apps.apple.com" class="app-store-btn" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+        </svg>
+        Download on the App Store
+      </a>
+    </div>
+    <div class="legal-links">
+        <a href="https://the-punch-legal.notion.site/Terms-and-Conditions-32c8091a5ce180628574dc43ee77b7ba" target="_blank">Terms &amp; Conditions</a>
+        <span>·</span>
+        <a href="https://the-punch-legal.notion.site/Privacy-Policy-32c8091a5ce1804d997bc06d9de37b38" target="_blank">Privacy Policy</a>
+      </div>
+  </div>
+  
+  <div class="right">
+    <div class="phones">
+      <div class="phone phone-back">
+        <img src="assets/IMG_9579.png"/>
+      </div>
+      <div class="phone phone-front">
+        <img src="assets/create-punch.png"/>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
