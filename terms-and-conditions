@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/ThePunchLogo.png" />
+  <title>Terms & Conditions | The Punch</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111110;
+      color: #f5f0e8;
+      font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', sans-serif;
+      min-height: 100dvh;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(239,159,39,0.35));
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #f5f0e8;
+      text-decoration: none;
+    }
+
+    .logo-text span { color: #EF9F27; }
+
+    .card {
+      background: rgba(245, 240, 232, 0.04);
+      border: 1px solid rgba(245, 240, 232, 0.08);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    .accent { color: #EF9F27; }
+
+    .meta {
+      color: rgba(245,240,232,0.68);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
+      color: #EF9F27;
+      font-weight: 600;
+    }
+
+    p, li {
+      color: rgba(245,240,232,0.88);
+      font-size: 0.98rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    li + li {
+      margin-top: 0.45rem;
+    }
+
+    .section {
+      margin-top: 1.5rem;
+    }
+
+    .contact-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(239,159,39,0.08);
+      border: 1px solid rgba(239,159,39,0.18);
+      border-radius: 18px;
+    }
+
+    a {
+      color: #EF9F27;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: rgba(245,240,232,0.72);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <img class="logo-img" src="assets/ThePunchLogo.png" />
+      <a class="logo-text" href="index.html">The<span> Punch</span></a>
+    </div>
+
+    <div class="card">
+      <h1>Terms & <span class="accent">Conditions</span></h1>
+      <p class="meta"><strong>The Punch</strong><br />Effective Date: March 20, 2026</p>
+
+      <div class="section">
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By downloading, installing, or using The Punch mobile application ("App"),
+          you agree to be bound by these Terms. If you do not agree, do not use the App.
+        </p>
+        <p style="margin-top: 0.7rem;">
+          We may update these Terms at any time. Continued use after changes
+          means you accept the updated Terms.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>2. Eligibility</h2>
+        <p>You must be at least 18 years old to use The Punch.</p>
+      </div>
+
+      <div class="section">
+        <h2>3. User Accounts</h2>
+        <ul>
+          <li>Provide accurate information</li>
+          <li>Keep your password secure</li>
+          <li>Notify us of unauthorized access</li>
+          <li>You are responsible for all activity under your account</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>4. User-Generated Content</h2>
+
+        <h3>Ownership</h3>
+        <p>You own your content but grant us a license to use it to operate the app.</p>
+
+        <h3>Your Responsibility</h3>
+        <p>You are responsible for your content and must have the right to post it.</p>
+
+        <h3>Prohibited Content</h3>
+        <ul>
+          <li>Hate speech or harassment</li>
+          <li>Explicit or illegal content</li>
+          <li>Doxxing or sharing private info</li>
+          <li>Spam or impersonation</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>5. Prohibited Conduct</h2>
+        <ul>
+          <li>Illegal use of the app</li>
+          <li>Hacking or scraping</li>
+          <li>Reverse engineering</li>
+          <li>Harassment or abuse</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>6. Reporting and Moderation</h2>
+        <p>
+          We may remove content or suspend accounts that violate these Terms.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>7. Intellectual Property</h2>
+        <p>
+          All app content, branding, and code belong to The Punch and may not be used without permission.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>8. Privacy</h2>
+        <p>
+          Your use of the App is also governed by our Privacy Policy.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>9. Third-Party Services</h2>
+        <p>
+          We may use third-party services like Firebase. We are not responsible for them.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>10. Disclaimers</h2>
+        <p>
+          The App is provided "as is" without warranties of any kind.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>11. Limitation of Liability</h2>
+        <p>
+          We are not liable for indirect damages. Total liability is limited to $100 USD.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>12. Indemnification</h2>
+        <p>
+          You agree to defend and hold The Punch harmless from claims related to your use of the App.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>13. Termination</h2>
+        <p>
+          We may suspend or terminate your account at any time.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>14. Governing Law</h2>
+        <p>
+          These Terms are governed by U.S. law and resolved through arbitration.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>15. Changes to These Terms</h2>
+        <p>
+          We may update these Terms at any time.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>16. Contact Us</h2>
+        <div class="contact-box">
+          <p><strong>The Punch HQ</strong></p>
+          <p>Email: <a href="mailto:thepunchhq@gmail.com">thepunchhq@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>·</span>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
