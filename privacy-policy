@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/ThePunchLogo.png" />
+  <title>Privacy Policy | The Punch</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111110;
+      color: #f5f0e8;
+      font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Inter', 'Helvetica Neue', sans-serif;
+      min-height: 100dvh;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(239,159,39,0.35));
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #f5f0e8;
+      text-decoration: none;
+    }
+
+    .logo-text span { color: #EF9F27; }
+
+    .card {
+      background: rgba(245, 240, 232, 0.04);
+      border: 1px solid rgba(245, 240, 232, 0.08);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    .accent { color: #EF9F27; }
+
+    .meta {
+      color: rgba(245,240,232,0.68);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro {
+      color: rgba(245,240,232,0.88);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #f5f0e8;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
+      color: #EF9F27;
+      font-weight: 600;
+    }
+
+    p, li {
+      color: rgba(245,240,232,0.88);
+      font-size: 0.98rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    li + li {
+      margin-top: 0.45rem;
+    }
+
+    .section {
+      margin-top: 1.5rem;
+    }
+
+    .contact-box {
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
+      background: rgba(239,159,39,0.08);
+      border: 1px solid rgba(239,159,39,0.18);
+      border-radius: 18px;
+    }
+
+    a {
+      color: #EF9F27;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: rgba(245,240,232,0.55);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: rgba(245,240,232,0.72);
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 1.35rem;
+        border-radius: 22px;
+      }
+
+      .topbar {
+        margin-bottom: 1.75rem;
+      }
+
+      .logo-img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .logo-text {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <img class="logo-img" src="assets/ThePunchLogo.png" alt="The Punch logo" />
+      <a class="logo-text" href="index.html">The<span> Punch</span></a>
+    </div>
+
+    <div class="card">
+      <h1>Privacy <span class="accent">Policy</span></h1>
+      <p class="meta"><strong>The Punch</strong><br />Effective Date: March 23, 2026</p>
+
+      <p class="intro">
+        This Privacy Policy explains how The Punch ("we," "us," or "our") collects, uses,
+        stores, and shares information about you when you use the The Punch mobile application
+        ("App"). By using the App, you acknowledge that you have read and understood this
+        Privacy Policy.
+      </p>
+
+      <div class="section">
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Information You Provide</h3>
+        <ul>
+          <li>Name and email address provided at registration.</li>
+          <li>Password, stored in hashed/encrypted form. We never store plain-text passwords.</li>
+          <li>Profile photos you upload.</li>
+          <li>Posts, comments, and other content you create or share within the App.</li>
+        </ul>
+
+        <h3>1.2 Information Collected Automatically</h3>
+        <ul>
+          <li>Device information such as device type, operating system version, and unique device identifiers.</li>
+          <li>Usage data such as features accessed, actions taken, and session duration, collected through Firebase Analytics.</li>
+          <li>Log data including IP address, timestamps, and crash reports.</li>
+        </ul>
+
+        <h3>1.3 Information We Do Not Collect</h3>
+        <p>
+          We do not collect payment information, precise GPS location, or any biometric data.
+          We do not serve advertisements and do not collect data for advertising purposes.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>2. How We Use Your Information</h2>
+        <ul>
+          <li>Create and manage your account.</li>
+          <li>Display your profile and content to other users of the App.</li>
+          <li>Operate, maintain, and improve the App.</li>
+          <li>Respond to your support requests and communications.</li>
+          <li>Detect and prevent fraud, abuse, and violations of our Terms and Conditions.</li>
+          <li>Analyze usage trends through Firebase Analytics to understand how the App is used.</li>
+          <li>Send you important notices about the App, such as updates to these policies.</li>
+          <li>Send you push notifications related to your activity on the App, including reminders, updates, and interactions. You can control notification preferences through your device settings.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>3. How We Share Your Information</h2>
+
+        <h3>3.1 With Other Users</h3>
+        <p>
+          Your profile information, including your name and profile photo, and the content you
+          post, including posts and comments, are visible to other users of the App as part of
+          the core functionality of the service. Content you post on The Punch may be publicly
+          visible to other users of the App and may be accessible to anyone with access to the platform.
+        </p>
+
+        <h3>3.2 With Service Providers</h3>
+        <p>
+          We share information with third-party service providers who help us operate the App,
+          including Firebase (Google LLC) for authentication, database storage, and analytics.
+          Firebase’s privacy practices are governed by Google’s Privacy Policy.
+        </p>
+        <p style="margin-top: 0.75rem;">
+          Your information may be transferred to and processed in countries other than your own,
+          including the United States, where our service providers operate. These providers are
+          contractually obligated to use your information only as necessary to provide services
+          to us and in compliance with applicable law.
+        </p>
+
+        <h3>3.3 Legal Requirements</h3>
+        <p>
+          We may disclose your information if required to do so by law or in response to valid
+          legal process, such as a court order or subpoena, or if we believe disclosure is necessary
+          to protect the rights, property, or safety of The Punch, our users, or the public.
+        </p>
+
+        <h3>3.4 We Do Not Sell Your Data</h3>
+        <p>
+          We do not sell, rent, or trade your personal information to third parties for their
+          marketing or commercial purposes.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>4. Data Retention</h2>
+        <p>
+          We retain your personal information for as long as your account is active or as needed
+          to provide you with the App. When you delete your account, we will delete your personal
+          data, including your name, email, profile photo, and all posts and comments you have made,
+          within 30 days, except where retention is required by law or for legitimate business purposes
+          such as fraud prevention and dispute resolution.
+        </p>
+        <p style="margin-top: 0.75rem;">
+          We may retain certain anonymized or aggregated data that cannot reasonably be used to identify
+          you for analytical purposes after your account is deleted.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>5. Your Rights and Choices</h2>
+
+        <h3>5.1 Account Deletion</h3>
+        <p>
+          You may delete your account at any time through the App settings. Upon deletion, your
+          personal information and content will be permanently removed from our systems within 30 days,
+          subject to any legal retention obligations.
+        </p>
+
+        <h3>5.2 Updating Your Information</h3>
+        <p>
+          You may update your name and profile photo at any time through your account settings within the App.
+        </p>
+
+        <h3>5.3 Account Security Responsibility</h3>
+        <p>
+          You are responsible for maintaining the confidentiality of your account credentials.
+        </p>
+
+        <h3>5.4 California Residents (CCPA)</h3>
+        <ul>
+          <li>Know what personal information we collect and how it is used.</li>
+          <li>Request deletion of your personal information.</li>
+          <li>Opt out of the sale of your personal information. We do not sell personal information.</li>
+          <li>Non-discrimination for exercising your privacy rights.</li>
+        </ul>
+        <p style="margin-top: 0.75rem;">
+          To exercise these rights, contact us at the email address listed below.
+        </p>
+
+        <h3>5.5 Users in the European Economic Area (EEA/UK)</h3>
+        <p>
+          If you are located in the EEA or UK, you have rights under the GDPR, including the right
+          to access, correct, or delete your personal data, and the right to data portability.
+          Our legal basis for processing your data is your consent for optional data and the
+          performance of our contract with you for data necessary to operate the App.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>6. Children’s Privacy</h2>
+        <p>
+          The Punch is not intended for individuals under the age of 18. We do not knowingly
+          collect personal information from individuals under 18. If we become aware that a user
+          under 18 has provided personal information, we will delete such information promptly.
+        </p>
+        <p style="margin-top: 0.75rem;">
+          If you are a parent or guardian and believe your child has provided us with personal
+          information, please contact us using the information below.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>7. Security</h2>
+        <p>
+          We implement reasonable technical and organizational measures to protect your personal
+          information against unauthorized access, loss, or misuse. These measures include encrypted
+          password storage, HTTPS data transmission, and access controls on our backend systems.
+        </p>
+        <p style="margin-top: 0.75rem;">
+          However, no method of transmission over the internet or electronic storage is 100% secure.
+          We cannot guarantee the absolute security of your information.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>8. DMCA and Copyright Agent</h2>
+        <p>
+          The Punch respects the intellectual property rights of others. If you believe that content
+          on the App infringes your copyright, please send a DMCA takedown notice to our designated
+          Copyright Agent.
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Copyright Agent</strong></p>
+          <p>The Punch</p>
+          <p>Email: [UPDATE WITH ACTUAL DMCA EMAIL]</p>
+          <p>Mailing Address: [YOUR REGISTERED ADDRESS]</p>
+        </div>
+
+        <p style="margin-top: 0.9rem;">
+          Your DMCA notice must include: (1) a description of the copyrighted work;
+          (2) a description of where the infringing material is located on the App;
+          (3) your contact information; (4) a statement of good faith belief that the use is not authorized;
+          (5) a statement of accuracy under penalty of perjury; and (6) your physical or electronic signature.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. When we do, we will revise the effective
+          date at the top of this document and notify you through the App or by email. We encourage you
+          to review this policy periodically.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>10. Contact Us</h2>
+        <div class="contact-box">
+          <p><strong>The Punch HQ</strong></p>
+          <p>Email: <a href="mailto:thepunchhq@gmail.com">thepunchhq@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>·</span>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
